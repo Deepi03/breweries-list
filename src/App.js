@@ -1,25 +1,28 @@
-import logo from './logo.svg';
+
 import './App.css';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+import BreweriesCards from './components/breweriesCards';
 
 function App() {
-  return (
+
+  const url = 'https://api.openbrewerydb.org/breweries';
+  const [breweries,setBreweries] =  useState(null);
+
+  useEffect( () => {
+    axios.get(url).then(response => {
+      setBreweries(response.data)
+    }) },  [url]
+  ) 
+  if(breweries){
+     return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {breweries.map(brewery => <BreweriesCards brewery = { brewery} ></BreweriesCards> )}
+
     </div>
   );
+  }
+ 
 }
 
 export default App;
