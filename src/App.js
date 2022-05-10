@@ -8,7 +8,7 @@ function App() {
 
   const url = 'https://api.openbrewerydb.org/breweries';
   const [breweries,setBreweries] =  useState(null);
-
+  
   useEffect( () => {
     axios.get(url).then(response => {
       setBreweries(response.data)
@@ -17,8 +17,11 @@ function App() {
   if(breweries){
      return (
     <div className="App">
-      {breweries.map(brewery => <BreweriesCards brewery = { brewery} ></BreweriesCards> )}
-
+      <div className="container">
+            <div className="row m-2">
+             {breweries.map(brewery => <BreweriesCards key = {brewery.id} brewery = { brewery } ></BreweriesCards> )}
+            </div>
+        </div>
     </div>
   );
   }
