@@ -19,7 +19,6 @@ let stylingObject = {
   }
 }
 function BreweriesCards ({ brewery }) {
-  console.log('')
   return (
     <div className='col-sm m-2'>
       <div className='card' style={stylingObject.divCard}>
