@@ -27,16 +27,6 @@ function Search () {
     },
     [searchTerm]
   )
-
-  /* useEffect(
-    () => {
-      GetbreweriesByName(searchTerm).then(res => {
-        setBreweries(res)
-      })
-    },
-    [searchTerm]
-  )
- */
   if (breweries) {
     return (
       <div>
