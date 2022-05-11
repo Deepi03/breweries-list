@@ -1,12 +1,5 @@
 import React from 'react'
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link,
-  Outlet
-} from 'react-router-dom'
-import BreweryDetails from './breweryDetails'
+import { Link, Outlet } from 'react-router-dom'
 
 let stylingObject = {
   divCard: {
@@ -34,7 +27,7 @@ function BreweriesCards ({ brewery }) {
           <p className='card-text'>
             {' '}{brewery.city}
           </p>
-          <Link to={`/details/${brewery.id}`} className='btn btn-warning'>
+          <Link to={`/details/${brewery.id}`} className='btn btn-info'>
             Detail
           </Link>
           <Outlet />

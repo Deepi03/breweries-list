@@ -13,9 +13,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path='/' element={<App />} />
-
+      {['/', '/home'].map(path => <Route path={path} element={<App />} />)}
       <Route exact path='/details/:id' element={<BreweryDetails />} />
+      <Route exact path=':_by_name' element={<BreweriesCards />} />
 
       <Route
         path='*'

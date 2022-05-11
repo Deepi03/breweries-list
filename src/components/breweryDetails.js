@@ -36,8 +36,6 @@ function BreweryDetails () {
 
   useEffect(() => {
     GetbreweryDetail(params.id).then(res => {
-      console.log('inside useEf')
-      console.log(res)
       setBreweryDetail(res)
     })
   }, [])
@@ -47,7 +45,7 @@ function BreweryDetails () {
       <div>
         <div style={stylingObject.divHead}>
           <h3>
-            Details of Brewery {breweryDetail.name}
+            Details of {breweryDetail.name}
           </h3>
         </div>
 
@@ -104,7 +102,7 @@ function BreweryDetails () {
                   : null}
               </li>
             </ul>
-            <button className='btn btn-warning' onClick={() => navigate(-1)}>
+            <button className='btn btn-info' onClick={() => navigate(-1)}>
               Go back
             </button>
           </div>
