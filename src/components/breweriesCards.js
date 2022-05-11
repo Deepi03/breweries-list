@@ -2,11 +2,12 @@ import React from 'react'
 import { Link, Outlet } from 'react-router-dom'
 
 let stylingObject = {
+  background: {},
   divCard: {
+    background: '#D3D3D3',
     width: '18rem'
   },
   cardTitle: {
-    'background-color': 'black',
     color: 'white',
     padding: '1rem'
   }
