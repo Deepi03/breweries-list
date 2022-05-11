@@ -12,11 +12,9 @@ export async function GetbreweryDetail (id) {
   return output[0]
 }
 export async function GetbreweriesByName (searchText) {
-  console.log(searchText)
   const response = await fetch(
     'https://api.openbrewerydb.org/breweries?by_name=' + searchText
   )
   let result = await response.json()
-  console.log(result)
   return result
 }
