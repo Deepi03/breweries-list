@@ -1,4 +1,8 @@
 
+# Beweries List
+
+Fetch data from api and display the list of breweries in home page. On clicking ``Detail`` button of a brewery it redirected to detail page also there is ``Go back`` button which navigates you to the home page.
+There is a ``simple search functionality`` which filter and fetch the breweries from api by name given in the input field.
 
 # Getting Started with Create React App
 
@@ -15,11 +19,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
